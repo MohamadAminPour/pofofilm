@@ -1,0 +1,143 @@
+.register-container,
+.login-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--dark1);
+  height: 100vh;
+  width: 100%;
+  transition: 1s ease;
+}
+.logo {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.register-forms {
+  width: 25rem;
+  overflow: hidden;
+}
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100rem;
+  transform: translateX(24%);
+  transition: 1s;
+}
+
+.register-form,
+.login-form{
+  width: 23rem;
+  padding: 2rem 0;
+  height: auto;
+  border-radius: 1rem;
+  background-color: var(--light1);
+  box-shadow: 0 5px 15px var(--light2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.register-title,
+.login-title{
+  font-size: 1.2rem;
+}
+.register-subtitle,
+.login-subtitle {
+  font-weight: 100;
+  margin-top: .2rem;
+  margin-bottom: 1rem;
+  color: var(--dark2);
+  font-size: .9rem;
+}
+.register-subtitle a,
+.login-subtitle a {
+  background-color: var(--light1);
+  margin: 0 0.3rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+.register-subtitle a:hover,
+.login-subtitle a:hover{
+  color: var(--primary);
+}
+.register-form div,
+.login-form div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+  width: 16rem;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+}
+.register-form div input,
+.login-form div input {
+  border-radius: 0.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark3);
+  padding: 0 1rem;
+  text-align: right;
+  font-size: .9rem;
+}
+.register-form div i,
+.login-form div i {
+  position: absolute;
+  left: 0;
+}
+.forgetPassword{
+  font-size: .7rem;
+  margin-top: 1rem;
+  color: var(--dark1);
+}
+.forgetPassword:hover{
+  color: var(--dark1);
+}
+.register-btn,
+.login-btn,
+.profileBtn {
+  width: 19rem;
+  background-color: var(--primary);
+  color: var(--light1);
+  border-radius: 10rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: .9rem;
+}
+.register-btn:hover,
+.login-btn:hover,
+.profileBtn:hover {
+  opacity: 0.8;
+}
+.register-footer,
+.login-footer {
+  width: 20rem;
+  font-weight: 100;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+  color: var(--light2);
+  direction: rtl;
+}
+.register-footer a,
+.login-footer a {
+  color: var(--primary);
+  cursor: pointer;
+}
+.register-footer a:hover,
+.login-footer a:hover {
+  color: var(--primary);
+}

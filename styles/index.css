@@ -1,0 +1,56 @@
+@import url(variables.css);
+@import url(./menu.css);
+@import url(./main.css);
+@import url(./subscriptions.css);
+@import url(./loginRegister.css);
+@import url(./search.css);
+@import url(./questions.css);
+@import url(./playOnlline.css);
+@import url(./cardMovies.css);
+@import url(./movie.css);
+@import url(contacts.css);
+@import url(./footer.css);
+@import url(./ticket.css);
+
+@font-face {
+  font-family: Tanha;
+  src: url(../assets/fonts/Tanha.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tanha;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--dark1);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--light1);
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none !important;
+}

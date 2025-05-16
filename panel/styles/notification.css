@@ -1,0 +1,135 @@
+.notifications {
+  padding: 0 1rem;
+}
+.notifications form {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.notifications form p:nth-child(1) {
+  margin-bottom: 1.1rem;
+  font-size: 1.3rem;
+}
+.notifications form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.notifications form div div {
+  display: flex;
+  flex-direction: column;
+}
+.notifications form div input,
+select{
+  border: none;
+  background-color: var(--dark3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+
+.notifications form button {
+  background-color: var(--primary);
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.notifications form button:hover {
+  background-color: var(--primaryLight);
+}
+
+.notifications-title {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.notifications-infos {
+  overflow: scroll;
+  height: 27rem;
+}
+.notifications-infos li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+}
+
+.notifications-infos li img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10rem;
+  object-fit: cover;
+}
+.notifications-infos li i {
+  font-size: 1.3rem;
+}
+.notifications-action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  background-color: var(--blue);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: var(--light1);
+  font-size: 0.8rem;
+}
+
+.notifications-action__wrench {
+  position: absolute;
+  width: 6rem;
+  top: 0;
+  left: 50%;
+  background-color: var(--light1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.5rem;
+  z-index: 99999999;
+  gap: 0;
+  display: none;
+}
+.notifications-action:hover .notifications-action__wrench {
+  display: block;
+}
+.notifications-action__wrench li {
+  gap: 0 !important;
+  padding: 0.1rem 0.3rem !important;
+  margin-top: 0.2rem !important;
+}
+.notifications-action__wrench li a {
+  color: var(--dark1);
+  font-size: 0.7rem;
+  padding: 0.1rem 0.3rem;
+  transition: 0.3s;
+}
+.notifications-action__wrench li a:hover {
+  color: var(--primary);
+}
+
+.notifications_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+.notifications_header img {
+  width: 4rem;
+  height: 4rem;
+}
+.notifications_header-title {
+  font-size: 1.3rem;
+}
+.notifications_header-subTitle {
+  color: var(--zinc);
+  font-size: 0.9rem;
+}

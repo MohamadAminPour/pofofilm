@@ -1,0 +1,314 @@
+.information {
+  padding: 0 1rem;
+}
+.information form {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.information form p:nth-child(1) {
+  margin-bottom: 1.1rem;
+  font-size: 1.3rem;
+}
+.information form div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.information form div div {
+  display: flex;
+  flex-direction: column;
+}
+.information form div input {
+  background-color: var(--dark3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.information form button {
+  background-color: var(--primary);
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.information form button:hover {
+  background-color: var(--primaryLight);
+}
+
+/*subscriptions-status*/
+/* .empty-msg {
+  padding: 1rem 0;
+} */
+
+.empty-msg__title {
+  color: var(--error);
+  background-color: var(--errorLight);
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+.empty-msg a {
+  background-color: var(--primary);
+  color: var(--dark1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  width: 9rem;
+  transition: 0.4s;
+}
+
+.empty-msg a i {
+  font-size: 1.3rem;
+}
+.empty-msg a:hover {
+  background-color: var(--primaryLight);
+  color: var(--dark1);
+}
+
+/*subscriptions-status*/
+
+.subscriptions-status {
+  padding: 0.5rem 1em 1rem 1rem;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  margin: 0 1rem;
+  border-radius: 1rem;
+}
+.subscriptions-status__title {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.progress-bar-container {
+  position: relative;
+  background: var(--dark3);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 5rem;
+  width: 100%;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primaryLight), var(--primary));
+  width: 10%;
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+  transition: width 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscriptions-status__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.subscriptions-status__info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.subscriptions-status__history li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--dark3);
+  margin-bottom: 0.5rem;
+}
+.subscriptions-status__history li i {
+  font-size: 1.5rem;
+}
+.subscriptions-status__history div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.history-date {
+  /* width: 80%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*wallet*/
+.wallet {
+  padding: 0.5rem 1em 1rem 1rem;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  margin: 1rem;
+  border-radius: 1rem;
+}
+.wallet-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 0.5rem;
+}
+.wallet-info li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  text-align: center;
+}
+.wallet-info li:nth-child(1) {
+  background-color: rgba(0, 255, 38, 0.2);
+}
+.wallet-info li:nth-child(2) {
+  background-color: rgba(0, 128, 255, 0.2);
+}
+.wallet-info li:nth-child(3) {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.wallet-info li div p:nth-child(1) {
+  font-size: 1.5rem;
+}
+.wallet-info li i {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  border-radius: 0 0 0 0.5rem;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  background-color: rgb(240, 240, 240);
+}
+.wallet-info li:nth-child(1) i {
+  color: rgba(0, 255, 38);
+}
+.wallet-info li:nth-child(2) i {
+  color: rgba(0, 128, 255);
+}
+.wallet-info li:nth-child(3) i {
+  color: rgba(255, 0, 0);
+}
+.wallet-history__title {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.wallet-sharging {
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--green);
+  width: 10rem;
+  border-radius: 0.5rem;
+  color: var(--light1);
+}
+.wallet-history {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.wallet-history li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--dark3);
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+.wallet-history li div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wallet-history li i {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1000px) {
+  .information form div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .subscriptions-status__history {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  .subscriptions-status__history li {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .history-date {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+  }
+  .history-date p {
+    font-size: 0.9rem;
+  }
+  .history-subscriptionsType {
+    flex-direction: column;
+  }
+  .history-subscriptionsType p {
+    font-size: 1.1rem;
+  }
+  .subscriptions-status__history li div:nth-child(1) i {
+    font-size: 2.5rem;
+  }
+  .subscriptions-status__history li i {
+    font-size: 1.5rem;
+  }
+  .information form div div {
+    font-size: 0.9rem;
+  }
+  .information form button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .subscriptions-status__title,
+  .information form p:nth-child(1) {
+    font-size: 1.2rem !important;
+  }
+  .subscriptions-status__info {
+    font-size: 0.8rem;
+  }
+  .subscriptions-status__history li p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .subscriptions-status__history {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .information form {
+    padding-bottom: 5rem;
+  }
+  .information form div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 350px) {
+  .subscriptions-status__info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

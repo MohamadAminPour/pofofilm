@@ -1,0 +1,16 @@
+:root {
+  --light1: #fff;
+  --light2: #ffffff3e;
+  --light3: #ffffff13;
+  --gray: rgb(202, 202, 202);
+  --primary: #ff8000;
+  --primaryLight: #ff8000c1;
+  --error: red;
+  --errorLight: rgba(255, 0, 0, 0.30);
+  --green: #04a777;
+  --blue: #007bc7;
+  --dark1: #181b1d;
+  --dark2: #181b1d4b;
+  --dark3: #181b1d13;
+  --zinc: #181b1d83;
+}

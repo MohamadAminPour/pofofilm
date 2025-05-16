@@ -1,0 +1,56 @@
+@import url(../../styles/variables.css);
+@import url(./dashboard.css);
+@import url(./sidebar.css);
+@import url(./information.css);
+@import url(./users.css);
+@import url(./movies.css);
+@import url(./notification.css);
+@import url(./comments.css);
+@import url(./tableData.css);
+@import url(./series.css);
+@import url(./slider.css);
+@import url(./about.css);
+@import url(./subscriptions.css);
+
+@font-face {
+  font-family: Tanha;
+  src: url(../../assets/fonts/Tanha.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tanha;
+}
+
+body {
+  height: 100vh;
+  /* background-color: var(--dark1); */
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--light1);
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+button {
+  border: none !important;
+  outline: none !important;
+}

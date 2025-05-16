@@ -1,0 +1,146 @@
+.mainSlide1 {
+  background-color: var(--light3);
+  min-width: 18rem;
+  margin-bottom: 4rem;
+  height: 28rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.slide-image {
+  overflow: hidden;
+  border-radius: 0.7rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* aspect-ratio: 3/2; */
+  /* mix-blend-mode: color-burn; */
+}
+
+.slideBtns {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(5rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  transition: 0.5s;
+}
+
+.mainSlide1:hover .slideBtns {
+  transform: translateY(0);
+}
+
+.slideBtns a {
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--light1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.slideBtns a:hover {
+  background-color: var(--primary);
+  color: var(--dark1);
+}
+
+.slideBtns a p {
+  margin: 0 0.4rem;
+}
+
+.slideBtns a i {
+  font-size: 1.2rem;
+}
+
+.trailerBtn {
+  background-color: var(--light2);
+}
+
+.downloadBtn {
+  background-color: var(--light2);
+}
+
+.slide-captionIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+  z-index: 999;
+  color: var(--primary);
+  background-color: var(--dark1);
+  padding: 0.2rem;
+}
+
+.slide-infos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  text-align: right;
+  direction: ltr;
+}
+
+.slide-infos p {
+  font-size: 1rem;
+  color: var(--light1);
+}
+
+.infos-ENGname {
+  text-align: left;
+}
+
+.infos-rate {
+  text-align: left;
+  font-size: 1.3rem !important;
+  color: var(--primary) !important;
+}
+
+.infos-rate span {
+  font-size: 1rem;
+  color: var(--light1) !important;
+}
+
+@media (max-width: 700px) {
+  .mainSlide1 {
+    min-width: 12rem !important;
+    height: 22rem !important;
+  }
+  .slide-infos p {
+    font-size: 0.9rem !important;
+    direction: rtl;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .slideBtns a {
+    font-size: 0.8rem !important;
+  }
+  .slide-captionIcon {
+    font-size: 1.2rem;
+  }
+}

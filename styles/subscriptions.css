@@ -1,0 +1,110 @@
+.subscriptions-container {
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+
+.subscriptions {
+  margin-top: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  padding: 2rem 1rem;
+  background-color: var(--light3);
+  border-radius: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.subscriptions-item form{
+  margin: 0.5rem;
+  background-color: var(--dark1);
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  position: relative;
+}
+.subscriptions-item__time {
+  font-size: 1.1rem;
+  direction: rtl;
+  color: var(--light1);
+  background-color: var(--primary);
+  padding: 0.1rem 1rem;
+  border-radius: 50rem;
+}
+.subscriptions-item__icon {
+  font-size: 5rem;
+}
+.subscriptions-item__off {
+  font-size: 1.3rem;
+  color: var(--light1);
+}
+
+.subscriptions-item__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+  gap: 0.3rem;
+  color: var(--light1);
+}
+.subscriptions-item__price p {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.subscriptions-item__suggestion {
+  position: absolute;
+  top: -1rem;
+  background-color: var(--primary);
+  padding: 0.3rem 1rem;
+  border-radius: 50rem;
+}
+
+.subscriptions-item__btn {
+  width: 80%;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  padding: 0.4rem;
+  border-radius: 50rem;
+  color: var(--light1);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.subscriptions-item__btn:hover {
+  background-color: var(--primary);
+}
+
+
+@media (max-width: 1000px) {
+  .subscriptions {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+  .subscriptions-item__icon {
+    font-size: 4.5rem;
+  }
+  .subscriptions-item__time {
+    font-size: 0.8rem;
+  }
+  .subscriptions-item__off {
+    font-size: 1rem;
+  }
+  .subscriptions-item__price p {
+    font-size: 1.5rem;
+  }
+  .subscriptions-item__btn {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 600px) {
+  .subscriptions {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
