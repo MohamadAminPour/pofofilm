@@ -128,9 +128,9 @@
 .movie-detail__actions button {
   color: var(--light1);
   background-color: var(--light3);
-  transition: .4s;
-  padding: 0.2rem .8rem;
-  font-size: .9rem;
+  transition: 0.4s;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.9rem;
   border-radius: 10rem;
 }
 .movie-detail__actions button:hover {
@@ -162,7 +162,7 @@
   gap: 0.3rem;
   margin-bottom: 0.5rem;
 }
-.accordion-body .accordion-movies:hover a{
+.accordion-body .accordion-movies:hover a {
   color: var(--primary);
 }
 .accordion-body a {
@@ -177,7 +177,7 @@
   display: flex;
   overflow: auto;
 }
-.accordion-series::-webkit-scrollbar{
+.accordion-series::-webkit-scrollbar {
   height: 0;
 }
 
@@ -338,10 +338,11 @@ input[type="checkbox"] {
   flex-direction: column;
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  visibility: hidden;
+  opacity: 1;
+  transition: 0.5s;
 }
 .spoil.show {
-  visibility: visible;
+  opacity: 0;
 }
 .comments-content__seeMore {
   background-color: var(--light3) !important;

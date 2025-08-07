@@ -67,9 +67,18 @@ goToUp.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-
 function okPlayOnlineBtn() {
   let VideoCIntro = document.querySelector(".video-intro");
   VideoCIntro.style.display = "none";
 }
 
+let spoil = document.querySelectorAll(".spoil");
+let spoilBtns = document.querySelectorAll(".spoilBtn");
+
+spoilBtns.forEach((btn) => {
+  btn.addEventListener("click",() => {
+    spoil.forEach((item) => {
+      item.classList.add("show");
+    });
+  });
+});

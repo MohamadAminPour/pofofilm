@@ -17,32 +17,13 @@
 
   <div class="dashboard">
     <div class="dashboard-sidebar active">
-      <a href="" class="logo">پوفوفیلم</a>
-      <div class="accordion dashboard-accordion" id="accordionExample"></div>
+    <a href="../index.php" class="logo">پوفوفیلم</a>
+      <div class="accordion dashboard-accordion" id="accordionExample">
+         <?php include './components/panel-sidbar.php' ?>
+      </div>
     </div>
     <div class="dashboard-main">
-      <div class="dashboard-header">
-        <div class="dashboard-header__right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0">
-          <i class="bx bx-menu toggleSidebar"></i>
-          <div>
-            <i class="bx bx-bell"></i>
-            <p>4</p>
-          </div>
-        </div>
-        <div class="dashboard-header__left" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-          <div class="profile">
-            <img src="../assets/images/person.jfif" alt="" />
-            <div class="profileStatus">
-              <span class="online"></span>
-              <!-- <span class="offline"></span> -->
-            </div>
-          </div>
-          <div>
-            <p>mohammad</p>
-            <p>maminpour37@gmail.com</p>
-          </div>
-        </div>
-      </div>
+     <?php include './components/panel-header.php' ?>
       <div class="dashboard-content">
         <div class="wallet">
           <p class="wallet-history__title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
