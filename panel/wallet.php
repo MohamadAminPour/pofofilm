@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -77,10 +80,10 @@
               <p>100,000 تومان</p>
               <p>1403/12/05</p>
             </li>
-            <div class="empty-msg">
-              <p class="empty-msg__title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">تاکنون تراکنشی
+            <!-- <div class="empty-msg">
+              <p class="empty-msg__title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">تاکنون تراکنشی
                 توسط شما انجام نشده است .</p>
-            </div>
+            </div> -->
           </ul>
         </div>
       </div>

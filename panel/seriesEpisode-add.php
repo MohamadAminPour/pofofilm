@@ -192,7 +192,7 @@ if(isset($_POST['addEpisode'])){
                         if (data.length > 0) {
                             let options = '<option value="">-- فصل مورد نظر را انتخاب کنید --</option>';
                             $.each(data, function(key, season) {
-                                options += `<option value="${season.id}">فصل ${season.seasoneNum} - ${season.language=="sub"?"دوبله فارسی":"زیرنویس فارسی"}</option>`;
+                                options += `<option value="${season.id}">فصل ${season.seasoneNum} - ${season.language=="dub"?"دوبله فارسی":"زیرنویس فارسی"}</option>`;
                             });
                             seasonsSelect.html(options).prop('disabled', false);
                         } else {

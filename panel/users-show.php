@@ -98,13 +98,13 @@
                 <p>عملیات</p>
                 <i class="bx bx-wrench"></i>
                 <ul class="user-action__wrench">
-                  <?php if($user['role']==0){ ?>
+                  <?php if(isset($_SESSION['role'])==2 && $user['role']==0){ ?>
                     <li><a href="./banUser.php?id=<?= $user['id'] ?>">بن کردن</a></li>
                     <li><a href="./upgradeToAdmin.php?id=<?= $user['id'] ?>">ارتقا به ادمین</a></li>
                     <li><a href="./upgradeToOwner.php?id=<?= $user['id'] ?>">ارتقا به مالک</a></li>
-                  <?php } elseif($user['role']==2) { ?>
+                  <?php } elseif($_SESSION['role']==2 && $user['role']==2) { ?>
                     <li><a href="./removeFromOwner.php?id=<?= $user['id'] ?>">حذف مالکیت</a></li>
-                  <?php }  elseif($user['role']==1) { ?>
+                  <?php }  elseif($_SESSION['role']==2 && $user['role']==1) { ?>
                     <li><a href="./upgradeToOwner.php?id=<?= $user['id'] ?>">ارتقا به مالک</a></li>
                     <li><a href="./removeFromAdmin.php?id=<?= $user['id'] ?>">حذف ادمینی</a></li>
                     <li><a href="./banUser.php?id=<?= $user['id'] ?>">بن کردن</a></li>

@@ -118,6 +118,7 @@
       $notLogin = true;
     }
   }
+  
 
 
 /////////////////////////////////////////ریکشن ها////////////////////////////////////////////////
@@ -229,7 +230,7 @@
     }
   }
 
-
+// var_dump($subbed_seasons);
 ?>
 
 
@@ -290,7 +291,7 @@
           rgba(0, 0, 0, 0.1),
           var(--dark1)
         ),
-        url("./assets/images/<?= $item['bg'] ?>");
+        url("./assets/images/media/<?= $item['bg'] ?>");
         background-attachment: fixed;
     }
 
@@ -301,7 +302,7 @@
             rgba(0, 0, 0, 0),
             var(--dark1)
           ),
-          url("./assets/images/<?= $item['cover'] ?>");
+          url("./assets/images/media/<?= $item['cover'] ?>");
       }
     }
   </style>
@@ -316,7 +317,7 @@
         <div class="movie-bg">
           <div class="movie-content">
             <div class="movie-cover">
-              <img src="./assets/images/<?= $item['cover'] ?>" alt="" />
+              <img src="./assets/images/media/<?= $item['cover'] ?>" alt="" />
             </div>
             <div class="movie-info">
               <p class="movie-info__name"><?= $item['faName'] ?></p>
@@ -398,14 +399,14 @@
               id="accordionExample"
              >
 
-             <?php foreach($dubbed_seasons as $dubItem): ?>
+             <?php  foreach($dubbed_seasons as $dubItem): ?>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    لینک های دوبله فارسی 
+                <h2 class="accordion-header" id="heading<?=$dubItem['id']?>">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?=$dubItem['id']?>" aria-expanded="false" aria-controls="collapse<?=$dubItem['id']?>">
+                    لینک های دوبله فارسی | فصل <?= $dubItem['seasoneNum'] ?>
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapse<?=$dubItem['id']?>" class="accordion-collapse collapse" aria-labelledby="heading<?=$dubItem['id']?>" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <!-- <div>
                     <i class='bx bx-lock-alt'></i>
@@ -424,7 +425,7 @@
                            فصل <?= $dubItem['seasoneNum'] ?> - قسمت <?= $item['episodeNum'] ?>
                         </p>
                         <ul>
-                          <?php if($item['px480']){ ?>
+                          <?php if($dubItem['subscription']==='0'){if($item['px480']){ ?>
                           <li>
                             <i class="bx bx-down-arrow-alt"></i>
                             <a href="./assets/movies/<?= $item['px480'] ?>">کیفیت 480</a>
@@ -444,7 +445,11 @@
                             <i class="bx bx-down-arrow-alt"></i>
                             <a href="./assets/movies/<?= $item['px4k'] ?>">کیفیت 1080</a>
                           </li>
-                          <?php } ?>
+                          <?php }} else{ ?>
+                             <div>
+                                <p>برای این بخش هنوز لینک دانلودی قرار نگرفته است.</p>
+                             </div>
+                           <?php } ?>
                         </ul>
                       </div>
                       <?php  endforeach;} else{ ?>
@@ -459,14 +464,14 @@
              <?php endforeach; ?>
 
 
-           <?php foreach($subbed_seasons as $subItem): ?>
+            <?php foreach($subbed_seasons as $subItem): ?>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    لینک های زیرنویس فارسی 
+                <h2 class="accordion-header" id="heading<?=$subItem['id']?>">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?=$subItem['id']?>" aria-expanded="false" aria-controls="collapse<?=$subItem['id']?>">
+                    لینک های زیرنویس فارسی | فصل <?= $subItem['seasoneNum'] ?>
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div id="collapse<?=$subItem['id']?>" class="accordion-collapse collapse" aria-labelledby="heading<?=$subItem['id']?>" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <!-- <div>
                     <i class='bx bx-lock-alt'></i>
@@ -485,7 +490,7 @@
                            فصل <?= $subItem['seasoneNum'] ?> - قسمت <?= $item['episodeNum'] ?>
                         </p>
                         <ul>
-                          <?php if($item['px480']){ ?>
+                          <?php if($subItem['subscription']==='0'){ if($item['px480']){ ?>
                           <li>
                             <i class="bx bx-down-arrow-alt"></i>
                             <a href="./assets/movies/<?= $item['px480'] ?>">کیفیت 480</a>
@@ -505,19 +510,23 @@
                             <i class="bx bx-down-arrow-alt"></i>
                             <a href="./assets/movies/<?= $item['px4k'] ?>">کیفیت 1080</a>
                           </li>
-                          <?php } ?>
+                          <?php }} else{ ?>
+                             <div>
+                                <p>برای مشاهده این قسمت باید اشتراک داشته باشید.</p>
+                             </div>
+                           <?php } ?>
                         </ul>
                       </div>
                       <?php endforeach; } else{ ?>
                         <div>
                           <p>برای این بخش هنوز لینک دانلودی قرار نگرفته است.</p>
                         </div>
-                      <?php   }?>
+                      <?php }?>
                     </div>
                   </div>
                 </div>
               </div>
-             <?php endforeach; ?>
+            <?php endforeach; ?>
 
            
             </div>
@@ -541,7 +550,7 @@
                 <div class="swiper-slide mainSlide1">
                   <i class="bx bx-captions slide-captionIcon"></i>
                   <div class="slide-image">
-                    <img src="./assets/images/<?= $suggestionItem['cover'] ?>" alt="" />
+                    <img src="./assets/images/media/<?= $suggestionItem['cover'] ?>" alt="" />
                     <div class="slideBtns">
                       <a href="./seriesTrailer.php?id=<?= $suggestionItem['media_id'] ?>" class="trailerBtn">
                         <i class="bx bx-tv"></i>

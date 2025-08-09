@@ -21,7 +21,9 @@ foreach($userSelected as $user){}
     <title>Document</title>
 </head>
 <style>
- 
+  .dashboard ~ *{
+    z-index: 9999999999 !important;
+  }
 </style>
 <body>
         <?php if($user['role']==2){ ?>

@@ -1,6 +1,6 @@
 <?php
 include "./server/PDO.php";
-$pageName = " index";
+$pageName = "index";
 session_start();
 
 $query = $conn->prepare('SELECT * FROM movies');
@@ -72,7 +72,7 @@ $query->execute();
   <div class="swiper headSwiper">
     <div class="swiper-wrapper">
       <?php foreach($medias as $media): ?>
-      <div class="swiper-slide headSlide" style="background-image: url(./assets/images/<?= $media['bg'] ?>)">
+      <div class="swiper-slide headSlide" style="background-image: url(./assets/images/media/<?= $media['bg'] ?>)">
         <div class="headSlide-content">
           <p class="item-name" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
             <?= $media['faName'] ?>
@@ -123,241 +123,6 @@ $query->execute();
   </div>
 
   <div class="container mainContainer">
-    <!-- <div class="recommendContainer">
-      <div class="swiper recommendSwiper">
-        <div class="sec-header">
-          <div class="sec-header__left">
-            <i class="bx bx-coffee header-left__icon"></i>
-          </div>
-          <div class="sec-header__right">
-            <p class="sec-title">پیشنهادی من</p>
-            <p class="sec-subtitle">فیلم امشبت هم جور شد رفیق !</p>
-          </div>
-        </div>
-        <div class="swiper-wrapper recommendWraper">
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (1).jfif" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (1).jpg" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (10).jfif" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (10).jpg" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (11).jfif" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (11).jpg" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (12).jfif" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (12).jpg" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (13).jpg" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-          <div class="swiper-slide mainSlide1">
-            <i class="bx bx-captions slide-captionIcon"></i>
-            <div class="slide-image">
-              <img src="./assets/images/1 (14).jpg" alt="" />
-              <div class="slideBtns">
-                <a href="" class="trailerBtn">
-                  <i class="bx bx-tv"></i>
-                  <p>تریلر</p>
-                </a>
-                <a href="" class="downloadBtn">
-                  <i class="bx bx-download"></i>
-                  <p>دانلود</p>
-                </a>
-              </div>
-            </div>
-            <div class="slide-infos">
-              <p class="infos-ENGname">Evil Dead Rise</p>
-              <p class="infos-FAname">ظهور مرده شیطانی</p>
-              <p class="infos-rate">6.5 <span> / 10</span></p>
-              <p class="infos-time">01:32:58</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="recommendContainer">
       <div class="swiper recommendSwiper">
         <div class="sec-header">
@@ -374,7 +139,7 @@ $query->execute();
           <div class="swiper-slide mainSlide1">
             <i class="bx bx-captions slide-captionIcon"></i>
             <div class="slide-image">
-              <img src="./assets/images/<?= $series['cover'] ?>" alt="" />
+              <img src="./assets/images/media/<?= $series['cover'] ?>" alt="" />
               <div class="slideBtns">
                 <a href="./seriesTrailer.php?id=<?= $series['media_id'] ?>" class="trailerBtn">
                   <i class="bx bx-tv"></i>
@@ -415,7 +180,7 @@ $query->execute();
           <div class="swiper-slide mainSlide1">
             <i class="bx bx-captions slide-captionIcon"></i>
             <div class="slide-image">
-              <img src="./assets/images/<?= $movie['cover'] ?>" alt="" />
+              <img src="./assets/images/media/<?= $movie['cover'] ?>" alt="" />
               <div class="slideBtns">
                 <a href="./movieTrailer.php?id=<?= $movie['media_id'] ?>" class="trailerBtn">
                   <i class="bx bx-tv"></i>

@@ -260,7 +260,7 @@
           rgba(0, 0, 0, 0.1),
           var(--dark1)
         ),
-        url("./assets/images/<?= $item['bg'] ?>");
+        url("./assets/images/media/<?= $item['bg'] ?>");
         background-attachment: fixed;
     }
 
@@ -271,7 +271,7 @@
             rgba(0, 0, 0, 0),
             var(--dark1)
           ),
-          url("./assets/images/<?= $item['cover'] ?>");
+          url("./assets/images/media/<?= $item['cover'] ?>");
       }
     }
   </style>
@@ -286,7 +286,7 @@
         <div class="movie-bg">
           <div class="movie-content" >
             <div class="movie-cover">
-              <img src="./assets/images/<?= $item['cover'] ?>" alt="" />
+              <img src="./assets/images/media/<?= $item['cover'] ?>" alt="" />
             </div>
             <div class="movie-info">
               <p class="movie-info__name"><?= $item['faName'] ?></p>
@@ -503,7 +503,7 @@
                   <div class="swiper-slide mainSlide1">
                     <i class="bx bx-captions slide-captionIcon"></i>
                     <div class="slide-image">
-                      <img src="./assets/images/<?= $suggestionItem['cover'] ?>" alt="" />
+                      <img src="./assets/images/media/<?= $suggestionItem['cover'] ?>" alt="" />
                       <div class="slideBtns">
                         <a href="./movieTrailer.php?id=<?= $suggestionItem['media_id'] ?>" class="trailerBtn">
                           <i class="bx bx-tv"></i>

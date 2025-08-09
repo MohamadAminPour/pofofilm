@@ -30,13 +30,18 @@
         <li><a href="./playOnlline.php" class="menu-link">پخش آنلاین</a></li>
       </ul>
     </div>
-    <div class="menu-left">
+    <div class="menu-left" style="gap: .5rem;">
       <a href="./search.php" type="submit" class="searchBtn" style="background-color: #fff;padding: .7rem;display: flex;align-items: center;color: #000;border-radius: .4rem;"><i class="bx bx-search"></i></a>
       <div class="menu-auth">
-        <a href="./login.php" class="auth-notLogin">
-          <p>ورود یا ثبت نام</p>
-          <i class="bx bx-log-in"></i>
-        </a>
+        <?php if(isset($_SESSION['id'])){ ?>
+          <a href="./panel/information-show.php" class="auth-notLogin"><i class="bx bx-user"></i>
+            <p>پروفایل</p>
+          </a>
+        <?php }else{ ?>
+          <a href="./login.php"><i class="bx bx-log-in"></i>
+            <p>ورود یا ثبت نام</p>
+          </a>
+        <?php } ?>
       </div>
     </div>
   </menu>

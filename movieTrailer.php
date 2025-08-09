@@ -23,7 +23,7 @@ foreach($movie as $item){}
 </head>
 
 <body>
-  <video controls preload="auto" poster="./assets/images/<?= $item['bg'] ?>">
+  <video controls preload="auto" poster="./assets/images/media/<?= $item['bg'] ?>">
     <source src="./assets/movies/<?= $item['trailer'] ?>" type="video/mp4">
     </source>
   </video>

@@ -16,14 +16,14 @@ $seriesSearch=$series;
 
 if(isset($_POST['searchBtn'])){
   $title = $_POST['title'];
-  $result=$conn->prepare("SELECT * FROM movies WHERE faName LIKE '%$title%' OR enName LIKE '%$title%' OR enDate LIKE '%$title%' OR faDate LIKE '%$title%' OR category LIKE '%$title%' OR imdb LIKE '%$title%'  ");
+  $result=$conn->prepare("SELECT * FROM movies WHERE faName LIKE '$title%' OR enName LIKE '$title%' OR enDate LIKE '$title%' OR faDate LIKE '$title%' OR category LIKE '$title%' OR imdb LIKE '$title%'  ");
   $result->execute();
   $movieSearch = $result->fetchAll(PDO::FETCH_ASSOC);
 }
 
 if(isset($_POST['searchBtn'])){
   $title = $_POST['title'];
-  $result=$conn->prepare("SELECT * FROM series WHERE faName LIKE '%$title%' OR enName LIKE '%$title%' OR enDate LIKE '%$title%' OR faDate LIKE '%$title%' OR category LIKE '%$title%' OR imdb LIKE '%$title%' ");
+  $result=$conn->prepare("SELECT * FROM series WHERE faName LIKE '$title%' OR enName LIKE '$title%' OR enDate LIKE '$title%' OR faDate LIKE '$title%' OR category LIKE '$title%' OR imdb LIKE '$title%' ");
   $result->execute();
   $seriesSearch = $result->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -92,7 +92,7 @@ if(isset($_POST['searchBtn'])){
       <div class="swiper-slide mainSlide1">
         <i class="bx bx-captions slide-captionIcon"></i>
         <div class="slide-image">
-          <img src="./assets/images/<?= $movie['cover'] ?>" alt="" />
+          <img src="./assets/images/media/<?= $movie['cover'] ?>" alt="" />
           <div class="slideBtns">
             <a href="./movieTrailer.php?id=<?= $movie['media_id'] ?>" class="trailerBtn">
               <i class="bx bx-tv"></i>
@@ -115,7 +115,7 @@ if(isset($_POST['searchBtn'])){
           <div class="swiper-slide mainSlide1">
             <i class="bx bx-captions slide-captionIcon"></i>
             <div class="slide-image">
-              <img src="./assets/images/<?= $series['cover'] ?>" alt="" />
+              <img src="./assets/images/media/<?= $series['cover'] ?>" alt="" />
               <div class="slideBtns">
                 <a href="./seriesTrailer.php?id=<?= $series['media_id'] ?>" class="trailerBtn">
                   <i class="bx bx-tv"></i>

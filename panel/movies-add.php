@@ -60,9 +60,9 @@ if(isset($_POST['addMovie'])){
     $query->bindValue(24, $create_at);
     $query->execute();
 
-    move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/movies/".$_FILES['cover']['name']);
+    move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/media/".$_FILES['cover']['name']);
 
-    move_uploaded_file($_FILES["bg"]["tmp_name"], "../assets/images/movies/".$_FILES['bg']['name']);
+    move_uploaded_file($_FILES["bg"]["tmp_name"], "../assets/images/media/".$_FILES['bg']['name']);
 
     move_uploaded_file($_FILES["trailer"]["tmp_name"], "../assets/movies/".$_FILES['trailer']['name']);
 
