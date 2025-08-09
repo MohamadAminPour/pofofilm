@@ -127,7 +127,7 @@ if(isset($_POST['sub'])){
         <script>
            Swal.fire({
                     title: "ثبت نام موفقیت آمیز",
-                    text: "اطلاعات شما در پایگاه داده ثبت شد",
+                    text: "اطلاعات شما در پایگاه داده ثبت شد !",
                     icon: "success"
                 });
                 
@@ -140,7 +140,7 @@ if(isset($_POST['sub'])){
         <script>
            Swal.fire({
                     title: "خطا هنگام ثبت نام",
-                    text: "فیلد ها را به طور کامل پر کنید",
+                    text: "فیلد ها را به طور کامل پر کنید !",
                     icon: "error"
                 });
         </script>
@@ -149,7 +149,7 @@ if(isset($_POST['sub'])){
         <script>
            Swal.fire({
                     title: "خطا هنگام ثبت نام",
-                    text: "نام کاربری وارد شده قبلا استفاده شده است",
+                    text: "نام کاربری وارد شده قبلا استفاده شده است !",
                     icon: "error"
                 });
         </script>
@@ -158,7 +158,7 @@ if(isset($_POST['sub'])){
         <script>
            Swal.fire({
                     title: "خطا هنگام ثبت نام",
-                    text: "ایمیل وارد شده قبلا استفاده شده است",
+                    text: "ایمیل وارد شده قبلا استفاده شده است !",
                     icon: "error"
                 });
         </script>
@@ -167,7 +167,7 @@ if(isset($_POST['sub'])){
         <script>
            Swal.fire({
                     title: "خطا هنگام ثبت نام",
-                    text: "رمز عبور باید حدقل 6 کاراکتر باشد",
+                    text: "رمز عبور باید حدقل 6 کاراکتر باشد !",
                     icon: "error"
                 });
         </script>

@@ -4,8 +4,8 @@ include "../server/PDO.php";
 $query = $conn->prepare('SELECT * FROM users WHERE id=?');
 $query->bindValue(1, $_SESSION['id']);
 $query->execute();
-$users = $query->FetchAll(PDO::FETCH_ASSOC);
-foreach($users as $user){}
+$userSelected = $query->FetchAll(PDO::FETCH_ASSOC);
+foreach($userSelected as $user){}
 // var_dump($users);
 
 
@@ -21,9 +21,7 @@ foreach($users as $user){}
     <title>Document</title>
 </head>
 <style>
-  .dashboard ~ *{
-    z-index: 9999999999 !important;
-  }
+ 
 </style>
 <body>
         <?php if($user['role']==2){ ?>
@@ -50,7 +48,7 @@ foreach($users as $user){}
         <?php } ?>
          
 
-        <?php if($user['role']){ ?>
+
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading2">
                 <button
@@ -74,9 +72,9 @@ foreach($users as $user){}
                 </div>
             </div>
         </div>
-        <?php } ?>
 
 
+        <?php if($user['role']!=0){ ?>
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading3">
                 <button
@@ -98,7 +96,7 @@ foreach($users as $user){}
                 </div>
             </div>
         </div>
-
+       
 
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading4">
@@ -167,6 +165,7 @@ foreach($users as $user){}
                 </div>
             </div>
         </div>
+        
 
 
         <!-- <div class="accordion-item">
@@ -260,8 +259,9 @@ foreach($users as $user){}
                 </div>
             </div>
         </div>
+        <?php }?>
 
-
+         <?php if($user['role']==2){ ?>
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading11">
                 <button
@@ -306,6 +306,7 @@ foreach($users as $user){}
                 </div>
             </div>
         </div>
+        <?php } ?>
 
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading13">

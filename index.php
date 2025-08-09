@@ -1,6 +1,6 @@
 <?php
 include "./server/PDO.php";
-$pageName = "index";
+$pageName = " index";
 session_start();
 
 $query = $conn->prepare('SELECT * FROM movies');

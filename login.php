@@ -101,7 +101,7 @@
       <?php if($notFound){ ?>
       Swal.fire({
         title: "خطا هنگام ورود",
-        text: "! کاربری با این مشخصات پیدا نشد",
+        text: "کاربری با این مشخصات پیدا نشد !",
         icon: "error",
         confirmButtonText: "باشه",
       });
