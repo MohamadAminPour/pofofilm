@@ -38,7 +38,7 @@
             <p>پروفایل</p>
           </a>
         <?php }else{ ?>
-          <a href="./login.php"><i class="bx bx-log-in"></i>
+          <a href="./login.php" class="auth-notLogin"><i class="bx bx-log-in"></i>
             <p>ورود یا ثبت نام</p>
           </a>
         <?php } ?>

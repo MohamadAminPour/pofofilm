@@ -50,7 +50,10 @@ if(isset($_POST['changeProfile'])){
 
   <div class="dashboard">
     <div class="dashboard-sidebar active">
-      <a href="../index.php" class="logo">پوفوفیلم</a>
+     <div style="display: flex; align-items: center;justify-content: space-between;">
+         <a href="../index.php" class="logo">پوفوفیلم</a>
+         <p style="font-size: 1.5rem; cursor: pointer;margin-left: .5rem;" onclick="dashboardSidebar.classList.remove('active');bgl.classList.remove('active')">×</p>
+      </div>
       <div class="accordion dashboard-accordion" id="accordionExample">
          <?php include './components/panel-sidbar.php' ?>
       </div>
@@ -62,29 +65,29 @@ if(isset($_POST['changeProfile'])){
           <p>اطلاعات شخصی شما</p>
           <div>
             <?php foreach($users as $user){ ?>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div >
               <label for="name">آیدی عددی : </label>
               <input type="text" placeholder="1032625681" disabled value="<?=$user['id']?>" />
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div >
               <label for="name">نام کاربری : </label>
               <input type="text" placeholder="mohammad"  name="username" value="<?=$user['username']?>"/>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <div >
               <label for="name">ایمیل : </label>
               <input type="text" placeholder="mohammad@gmail.com"  name="email" value="<?=$user['email']?>" />
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+            <div >
               <label for="name">رمز عبور : </label>
               <input type="text" placeholder="mmd123"  name="password" value="<?=$user['password']?>" />
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+            <div>
               <label for="name">پروفایل : </label>
               <input type="file" name="image" value="<?=$user['image']?>" />
             </div>
             <?php } ?>
           </div>
-          <button name="changeProfile" type="submit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+          <button name="changeProfile" type="submit" >
             <i class="bx bx-edit"></i>
             <p>ویرایش کردن</p>
           </button>
@@ -99,7 +102,9 @@ if(isset($_POST['changeProfile'])){
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/script.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      once:true
+    });
   </script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>

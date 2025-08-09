@@ -49,7 +49,10 @@ if(isset($_POST['addQuestion'])){
 
   <div class="dashboard" style="z-index: -1;">
     <div class="dashboard-sidebar active">
-     <a href="../index.php" class="logo">پوفوفیلم</a>
+     <div style="display: flex; align-items: center;justify-content: space-between;">
+         <a href="../index.php" class="logo">پوفوفیلم</a>
+         <p style="font-size: 1.5rem; cursor: pointer;margin-left: .5rem;" onclick="dashboardSidebar.classList.remove('active');bgl.classList.remove('active')">×</p>
+      </div>
       <div class="accordion dashboard-accordion" id="accordionExample">
          <?php include './components/panel-sidbar.php' ?>
       </div>
